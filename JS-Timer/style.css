@@ -1,0 +1,98 @@
+body{
+    background-image: url(images/cool-background.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+#top{
+    display: flex;
+    justify-content: space-evenly;
+}
+#top > button{
+    box-sizing: border-box;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid red;
+    border-radius: 0.6em;
+    color: red;
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px;
+    padding: 1.2em 2.8em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}  
+#top > button:hover,
+#top > button:focus {
+    color: #000000;
+    outline: 0;
+}
+
+#top > button {
+    border-color: blue;
+    color: #fff;
+    box-shadow: 0 0 40px 40px blue inset, 0 0 0 0 blue;
+    transition: all 150ms ease-in-out;
+}
+#top > button:hover {
+    box-shadow: 0 0 10px 0 blue inset, 0 0 10px 4px blue;
+}  
+#mid{
+	font-size: 65px;
+	color: #000000;
+	font-weight: lighter;
+	padding: 80px 0px 60px 0px;
+}
+div#mid {
+    display: flex;
+    justify-content: center;
+}
+div#bottom {
+    display: flex;
+    justify-content: center;
+}
+
+#bottom > button{
+    background:#da601e;
+    color:#fff;
+    border:none;
+    position:relative;
+    height:60px;
+    font-size:2.0em;
+    padding:0 2em;
+    cursor:pointer;
+    transition:800ms ease all;
+    letter-spacing: 1px;
+    outline:none;
+}
+#bottom > button:hover{
+    background:#fff;
+    color:#da601e;
+}
+#bottom > button:before,#bottom > button:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #1286a8;
+    transition:400ms ease all;
+}
+#bottom > button:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+}
+#bottom > button:hover:before,#bottom > button:hover:after{
+    width:100%;
+    transition:800ms ease all;
+}
+  

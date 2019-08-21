@@ -55,7 +55,7 @@ div#mid {
 }
 div#bottom {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 #bottom > button{
@@ -95,4 +95,17 @@ div#bottom {
     width:100%;
     transition:800ms ease all;
 }
-  
+#bottom > button:nth-child(2){
+    background: #b20000;
+}  
+#bottom > button:hover:nth-child(2){
+    background:#fff;
+    color:#b20000;
+}
+
+#bottom > button:nth-child(1):before,#bottom > button:after{
+    background: #1286a8;
+}
+#bottom > button:nth-child(2):before,#bottom > button:after{
+    background: #228B22;
+}

@@ -65,6 +65,9 @@ function start() {
         increment();
     }
 }
+function back() {
+    window.history.back()
+}
 
 
 function increment() {
@@ -75,8 +78,14 @@ function increment() {
                     if (sec <= 0) {
                         if (mins >= 0) {
                             mins--;
-                            outputMins.innerHTML = `${mins}`;
-                            sec = 60;
+                            if (mins < 10) {
+                                outputMins.innerHTML = `0${mins}`;
+                                sec = 60;
+                            }
+                            else {
+                                outputMins.innerHTML = `${mins}`;
+                                sec = 60;
+                            }
                         }
                     }
                     if (sec > 0) {

@@ -42,7 +42,7 @@ function addThirtySec() {
             outputSec.innerHTML = `${sec}`;
         }
         if (sec == 60) {
-            if (mins <= 30) {
+            if (mins <= 59) {
                 mins++
                 sec = 0;
                 outputSec.innerHTML = `0${sec}`;

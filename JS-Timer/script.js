@@ -72,7 +72,7 @@ function back() {
 
 function increment() {
     if (running == true) {
-        setInterval(() => {
+        let myInterval = setInterval(() => {
             if (sec > 0 || mins > 0) {
                 if (running == true) {
                     if (sec <= 0) {
@@ -96,6 +96,7 @@ function increment() {
                         else { outputSec.innerHTML = `${sec}`; }
                         if (sec <= 0 && mins <= 0) {
                             running = false;
+                            clearInterval(myInterval);
                         }
                     }
                 }

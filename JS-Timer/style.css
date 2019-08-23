@@ -1,7 +1,7 @@
 body{
     background-image: url(images/cool-background.png);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100% 100vh;
 }
 #top{
     display: flex;
@@ -108,4 +108,38 @@ div#bottom {
 }
 #bottom > button:nth-child(2):before,#bottom > button:after{
     background: #228B22;
+}
+@media (min-width:540px) and (max-width: 850px) {
+    #top > button {
+        margin: 5px;
+        margin-top: 20px;
+        padding: 1.0em 1.8em;
+    }
+    #bottom > button {
+        font-size: 1.3em;
+    }
+
+}
+@media (min-width:420px) and (max-width: 539px) {
+    #top > button {
+        margin: 5px;
+        margin-top: 20px;
+        padding: 1.0em 1.5em;
+        font-size: 0.9em;
+    }
+    #bottom > button {
+        font-size: 1.3em;
+    }
+}
+@media (min-width:320px) and (max-width: 539px) {
+    #top > button {
+        margin: 5px;
+        margin-top: 20px;
+        padding: 1.0em 1.0em;
+        font-size: 0.8em;
+    }
+    #bottom > button {
+        font-size: 1.3em;
+        padding: 0 1em;
+    }
 }

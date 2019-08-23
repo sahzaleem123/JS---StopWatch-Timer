@@ -60,9 +60,11 @@ function addThirtySec() {
 }
 
 function start() {
-    if (running == false) {
-        running = true;
-        increment();
+    if (sec > 0 || mins > 0) {
+        if (running == false) {
+            running = true;
+            decrement();
+        }
     }
 }
 function back() {
@@ -70,9 +72,9 @@ function back() {
 }
 
 
-function increment() {
+function decrement() {
     if (running == true) {
-        let myInterval = setInterval(() => {
+        setInterval(() => {
             if (sec > 0 || mins > 0) {
                 if (running == true) {
                     if (sec <= 0) {
@@ -90,13 +92,14 @@ function increment() {
                     }
                     if (sec > 0) {
                         sec--;
+                        document.getElementById('audio-1').play();
                         if (sec < 10) {
                             outputSec.innerHTML = `0${sec}`;
                         }
                         else { outputSec.innerHTML = `${sec}`; }
                         if (sec <= 0 && mins <= 0) {
+                            document.getElementById('audio-2').play();
                             running = false;
-                            clearInterval(myInterval);
                         }
                     }
                 }
@@ -104,6 +107,8 @@ function increment() {
         }, 1000)
     }
 }
+
+
 
 
 
